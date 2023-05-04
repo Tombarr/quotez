@@ -1,0 +1,67 @@
+{
+  "name": "Quotez",
+  "display": "Quotez",
+  "version": "1.0.1",
+  "subtitle": "Inspirational quotes daily",
+  "description": "Be inspired and find meaning with new quotes sent every day.",
+  "type": "certified",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/img/logo-56.png",
+    "112": "/img/logo-112.png"
+  },
+  "categories": [
+    "news",
+    "utilities"
+  ],
+  "theme_color": "#00897b",
+  "developer": {
+    "name": "Last Byte LLC",
+    "url": "https://kaios.dev/"
+  },
+  "cursor": false,
+  "fullscreen": false,
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "permissions": {
+    "systemXHR": {
+      "description": "To download quotes."
+    },
+    "serviceworker": {
+      "description": "To support offline usage."
+    },
+    "desktop-notification": {
+      "description": "To display notifications."
+    },
+    "mobiledata": {
+      "description": "To use mobile data."
+    },
+    "wifidata": {
+      "description": "To use wifi data."
+    },
+    "requestsync-manager": {
+      "description": "To get daily quotes."
+    }
+  },
+  "locales": {
+    "en-US": {
+      "name": "Quotez",
+      "subtitle": "Inspirational quotes daily",
+      "description": "Be inspired and find meaning with new quotes sent every day."
+    }
+  },
+  "messages": [
+    { "serviceworker-notification": "/index.html" },
+    { "activity": "/index.html" },
+    { "request-sync": "/index.html" }
+  ],
+  "activities": {
+    "new-quote": {
+      "href": "/index.html",
+      "disposition": "window"
+    }
+  },
+  "default_locale": "en-US",
+  "orientation": [ "portrait-primary", "landscape-primary" ]
+}

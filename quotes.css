@@ -1,0 +1,228 @@
+html {
+    background-color: #00897b;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    width: 100vw;
+    height: calc(100% - (24px + 1rem));
+    margin: 0;
+    padding: calc(24px + 1.5rem) 0 calc(36px + 1rem) 0;
+}
+
+#app-container {
+    padding: 1rem 0.5rem;
+}
+
+head {
+    display: block;
+}
+
+title {
+    display: block;
+    background-color: #00897b;
+    color: white;
+    padding: calc(24px + 0.5rem) 0.5rem 0.5rem 0.5rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+
+#ad-container {
+    background-color: #f9f9f9;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    height: 36px;
+    width: 100%;
+    margin: 0.5rem auto;
+}
+
+#ad-container[hidden] {
+    opacity: 0.75;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    border-inline-start: 0.5rem solid #ccc;
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-inline-end: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+.tags, .tags li {
+    margin: 0;
+    padding: 0;
+}
+
+.tags {
+    list-style-type: none;
+    margin-block-start: 1rem;
+}
+
+.tags li {
+    background-color: #ccc;
+    padding: 0.25rem 0.75rem;
+    display: inline-block;
+    border-radius: 1rem;
+}
+
+/* Dialog */
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 0.5rem;
+    width: 80%;
+    width: 80vw;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: 10;
+}
+
+dialog:not([hidden]) + .backdrop {
+    display: block;
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    left: -10vw;
+    right: -10vw;
+    top: -10vh;
+    bottom: -10vh;
+    background: rgba(255, 255, 255, 0.9);
+    content: '';
+    z-index: 5;
+}
+
+dialog[hidden] + .backdrop {
+    display: none;
+}
+
+dialog[hidden] {
+    display: none;
+}
+  
+dialog ol, dialog li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+dialog ol li + li {
+    margin-top: 0.5rem;
+}
+
+dialog ol {
+    margin: 0 auto;
+}
+  
+dialog[open] {
+    display: block;
+    animation: fadein 0.5s;
+}
+  
+dialog button {
+    text-align: left;
+    background: transparent;
+    background-color: #555555;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    color: white;
+    padding: 0.5rem 0.25rem;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+dialog#no-internet {
+    color: white;
+    text-align: center;
+    max-width: 8em;
+    padding-top: 1em;
+}
+
+body.no-scroll {
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+}
+
+body.no-scroll #softkey-menu {
+    display: none;
+}
+
+/* Softkey */
+
+#softkey-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 2rem;
+    overflow: hidden;
+    margin: 0;
+    z-index: 20;
+}
+  
+#softkey-menu button {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+}
+
+#softkey-menu button[hidden] {
+    display: none;
+}
+  
+#softkey-menu button svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: scale(0.7);
+}
+  
+#softkey-menu #softkey-left {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.5rem;
+}
+  
+#softkey-menu #softkey-right {
+    position: absolute;
+    left: calc(100vw - 2rem);
+    bottom: 0.5rem;
+}
